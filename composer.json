@@ -1,0 +1,26 @@
+{
+    "name": "product/sujan",
+    "description": "Product swicher",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mdsujansarkar",
+            "email": "sujansarkar786@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "phpunit/phpunit": "10.0.x-dev"
+    }
+}
