@@ -15,7 +15,7 @@ class UnitTest extends TestCase
     {
         $getVolumData = new Unit();
         $inputData= $getVolumData ->getVolume(50.50, 50.50);
-        $outPut = 101.00;
+        $outPut = 2550.25;
         $this->assertSame($outPut,$inputData);
     }
 }
