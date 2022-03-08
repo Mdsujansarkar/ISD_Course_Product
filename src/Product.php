@@ -1,26 +1,25 @@
 <?php
 declare(strict_types=1);
+
 namespace App;
-use App\Unit;
+use App\DhlCalculator;
+use App\PathoCalculator;
+use App\Dimension;
 
 class Product 
 {
     const PATHO = 'patho';
     const DHL = 'dhl';
-    private $height;
-    private $length;
-    public function __construct($height, $length)
-    {
-        $this->height = $height;
-        $this->length = $length;
-    }
-    public function getPrice(Unit $unit)
+  
+    public function getPrice(DhlCalculator $dhlCalculator, PathoCalculator $pathoCalculator)
     {
         if(self::PATHO === 'patho') {
-            return ($unit->getWeight(2.5)*2) + ($unit->getVolume($this->height, $this->length)*3);
+          
+            return $dhlCalculator->findCost($this->dimension);
         }
         if(self::DHL === 'dhl') {
-            return ($unit->getWeight(2.5)*3) +100;
+            
+            return $pathoCalculator->findCost($this->dimension);
         }
         
     }
