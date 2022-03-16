@@ -11,13 +11,13 @@ class Product
     const PATHO = 'patho';
     const DHL = 'dhl';
   
-    public function getPrice(DhlCalculator $dhlCalculator, PathoCalculator $pathoCalculator)
+    public function getPrice($test, DhlCalculator $dhlCalculator, PathoCalculator $pathoCalculator)
     {
-        if(self::PATHO === 'patho') {
+        if(self::PATHO === $test) {
           
             return $dhlCalculator->findCost($this->dimension);
         }
-        if(self::DHL === 'dhl') {
+        if(self::DHL === $test) {
             
             return $pathoCalculator->findCost($this->dimension);
         }

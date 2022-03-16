@@ -13,4 +13,4 @@ $pathoCal = new PathoCalculator();
 $dhCal->findCost($ob);
 $pathoCal->findCost($ob);
 $product = new Product();
-echo $product->getPrice($dhCal, $pathoCal);
+echo $product->getPrice('dhl', $dhCal, $pathoCal);
