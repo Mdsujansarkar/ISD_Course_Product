@@ -16,4 +16,22 @@ class Product
        $this->size = $size;
        $this->weight = $weight; 
     }
+
+    public function getSize(): Size {
+        return $this->size;
+    }
+
+    public function setSize(Size $size): self {
+        $this->size =$size;
+        return $this;
+    }
+
+    public function getWeight(): Weight {
+        return $this->weigh;
+    }
+
+    public function setWeight(Weight $weight): self {
+         $this->weigh = $weight;
+         return $this;
+    }
 }
