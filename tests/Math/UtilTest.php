@@ -19,6 +19,8 @@ class UtilTest extends TestCase
         $this->assertSame($expected,$output);
     }
     public function utilVolumeDataProvider(): array {
-        return [2,8];
+        return [
+            [new Size('2', '2','4')]
+        ];
     }
 }
